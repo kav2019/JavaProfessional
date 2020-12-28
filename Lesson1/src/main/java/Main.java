@@ -3,23 +3,41 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-//        System.out.println("Проверка первого задания");
-//        String[] array = new String[]{"One", "Two", "Three", "Four"};
-//        System.out.println("Оригинальный массив: " +Arrays.toString(array) + "\n" + "Измененный массив: " + Arrays.toString(change(array,0,3)));
-//        Integer[] array1 = new Integer[]{1,2,3,4};
-//        System.out.println("Оригинальный массив: " +Arrays.toString(array) + "\n" + "Измененный массив: " + Arrays.toString(change(array1,0,3)));
-//
-//
-//        System.out.println("Проверка торого задания");
-//        String[] array3 = new String[]{"One", "Two", "Three", "Four"};
-//        System.out.println(massToArray(array3));
+        System.out.println("Проверка первого задания");
+        String[] array = new String[]{"One", "Two", "Three", "Four"};
+        System.out.println("Оригинальный массив: " +Arrays.toString(array) + "\n" + "Измененный массив: " + Arrays.toString(change(array,0,3)));
+        Integer[] array1 = new Integer[]{1,2,3,4};
+        System.out.println("Оригинальный массив: " +Arrays.toString(array) + "\n" + "Измененный массив: " + Arrays.toString(change(array1,0,3)));
 
 
-        Box<Orange> appleBox = new Box<>();
-        appleBox.addInBox(new Orange());
-        appleBox.addInBox(new Orange());
-        appleBox.addInBox(new Orange());
+        System.out.println("Проверка торого задания");
+        String[] array3 = new String[]{"One", "Two", "Three", "Four"};
+        System.out.println(massToArray(array3));
+
+
+        Box<Apple> appleBox = new Box<>(new Apple());
+        appleBox.addInBox(new Apple());
+        appleBox.addInBox(new Apple());
+        appleBox.addInBox(new Apple());
+        appleBox.addInBox(new Apple());
+        appleBox.addInBox(new Apple());
         System.out.println(appleBox.getWeightBox());
+        appleBox.info();
+
+
+        Box<Orange> orangeBox = new Box<>(new Orange());
+        orangeBox.addInBox(new Orange());
+        orangeBox.addInBox(new Orange());
+        orangeBox.addInBox(new Orange());
+        System.out.println(orangeBox.getWeightBox());
+        appleBox.info();
+
+        System.out.println(orangeBox.compare(appleBox));
+
+        Box<Orange> orangeBox1 = new Box<>(new Orange()); //Пробуем пересыпать
+        orangeBox1.pour(orangeBox, orangeBox1);
+        System.out.println(orangeBox.getWeightBox());
+        System.out.println(orangeBox1.getWeightBox());
 
 
 
