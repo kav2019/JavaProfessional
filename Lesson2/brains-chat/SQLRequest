@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+    id INTEGER PRIMARY Key AUTOINCREMENT NOT NULL ,
+    login TEXT NOT NULL,
+    password TEXT NOT NULL,
+    name TEXT NOT NULL
+);
+INSERT INTO users (login, password, name) VALUES
+    ("ivan", "1234", "Иван"),
+    ("pasha", "4321", "Павел"),
+    ("sasha", "2345", "Александр"),
+    ("elena", "5432", "Елена"),
+    ("misha", "3456", "Михаил");
+    
+SELECT * FROM users;
